@@ -51,10 +51,10 @@ class DecimalConverter
     private function set_base_number($argumenet_list)
     {
         // 進数指定なし、あるいは 範囲（1<=<N<=16）外の場合はデフォルト11進数に
-        if (!isset($argumenet_list[2]) || $argumenet_list[2] > 16 || $argumenet_list[2] < 0) {
+        if (!isset($argumenet_list[1]) || $argumenet_list[1] > 16 || $argumenet_list[1] < 0) {
             $this->base_number = self::DEFAULT_BASE_NUMBER;
         } else {
-            $this->base_number = $argumenet_list[2];
+            $this->base_number = $argumenet_list[1];
         }
     }
 
