@@ -1,0 +1,39 @@
+{
+  "manifest_version": 1,
+  "name": "DevelopAssistant",
+  "description": "開発補助.",
+  "version": "1.3",
+  "icons": {
+    "16": "images/icon/icon16.png",
+    "48": "images/icon/icon48.png",
+    "128": "images/icon/icon128.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon/icon19.png",
+      "38": "images/icon/icon38.png"
+    },
+    "default_title": "assistant",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://test-xxx.co.jp/memo/",
+        "https://localhost:*/memo/",
+        "https://xx.xx.xx.xx:*/memo/"
+      ],
+      "js": ["js/content_scripts/common.js"],
+      "incognito": "split"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "storage",
+    "https://test-xxx.co.jp/memo/",
+    "https://localhost:*/memo/",
+    "https://xx.xx.xx.xx:*/memo/"
+    "webNavigation"
+  ]
+}
