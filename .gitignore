@@ -1,2 +1,5 @@
-*/.idea
-react_sample/js/.module-cache
+.idea
+*.iml
+node_modules
+.module-cache
+
